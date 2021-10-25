@@ -1,7 +1,7 @@
 # teachme
 基于HoshinoBotV2的maimaidx和Arcaea教教表情包生成器
 
-需要已添加[maimaiDX](https://github.com/Yuri-YuzuChaN/maimaiDX)和[Arcaea](https://github.com/Yuri-YuzuChaN/Arcaea)模块，若未安装则需要修改对应的资源文件目录
+需要安装[maimaiDX](https://github.com/Yuri-YuzuChaN/maimaiDX)和[Arcaea](https://github.com/Yuri-YuzuChaN/Arcaea)模块，若未安装则需要修改对应的资源文件目录
 
 ## 使用方法
 1. 将该项目放在Hoshinobot插件目录`modules`下，或者clone本项目
