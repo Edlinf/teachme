@@ -1,5 +1,5 @@
 # teachme
-基于HoshinoBotV2的maimei和Arcaea教教表情包生成器
+基于HoshinoBotV2的maimai和Arcaea教教表情包生成器
 ## 使用方法
 1. 将该项目放在Hoshinobot插件目录`modules`下，或者clone本项目
 2. 修改`teachme.py`中的资源文件目录
