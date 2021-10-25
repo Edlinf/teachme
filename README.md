@@ -5,7 +5,7 @@
 
 ## 使用方法
 1. 将该项目放在Hoshinobot插件目录`modules`下，或者clone本项目
-2. 修改`teachme.py`中的资源文件目录
+2. （可选）修改`teachme.py`中的资源文件目录
 3. 在`config/__bot__.py`模块列表中添加 `teachme`
 4. 重启Hoshinobot
 
