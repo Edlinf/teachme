@@ -12,6 +12,14 @@ sv = Service('teachme', help_='''
 等会再写
 '''.strip())
 
+teach_path = os.path.join(os.path.dirname(__file__), 'teach.jpg')
+module_path = os.path.split(os.path.dirname(__file__))[0]
+
+mai_res = os.path.join(module_path, 'maimaiDX/static/mai/cover')#maimai资源目录
+#mai_res = 'C:/Users/Administrator/Desktop/bot/HoshinoBot/hoshino/modules/maimaiDX/static/mai/cover/'
+
+arc_res = os.path.join(module_path, 'Arcaea/img/song')#arcaea资源目录
+#arc_res = 'C:/Users/Administrator/Desktop/bot/HoshinoBot/hoshino/modules/Arcaea/img/song/'
 
 def image_to_base64(img, format='PNG'):
     output_buffer = BytesIO()
@@ -23,12 +31,9 @@ def image_to_base64(img, format='PNG'):
 @sv.on_rex(r'^教教\s?id\s?([0-9]+)')
 async def teach_me(bot, ev: CQEvent):
     match = ev['match']
-    base_img = Image.open(r'C:\Users\Administrator\Desktop\bot\HoshinoBot\hoshino\modules\maimaiDX\static\mai\teach.jpg')
-    path_dir = 'C:/Users/Administrator/Desktop/bot/HoshinoBot/hoshino/modules/maimaiDX/static/mai/cover/'
+    base_img = Image.open(teach_path)
     name = match.group(1)
-    pngPath = os.path.join(path_dir, f'{name}.jpg')
-    if not os.path.exists(pngPath):
-        pngPath = os.path.join(path_dir, f'{name}.png')
+    pngPath = os.path.join(mai_res, f'{name}.jpg')
     try:
         tmp_img = Image.open(pngPath)
         box = (184,327,335,478)
@@ -43,10 +48,9 @@ async def teach_me(bot, ev: CQEvent):
 @sv.on_rex(r'^教教\s?([a-z]+)$')
 async def teach_me(bot, ev: CQEvent):
     match = ev['match']
-    base_img = Image.open(r'C:\Users\Administrator\Desktop\bot\HoshinoBot\hoshino\modules\maimaiDX\static\mai\teach.jpg')
-    path_dir = 'C:/Users/Administrator/Desktop/bot/HoshinoBot/hoshino/modules/Arcaea/img/song/'
+    base_img = Image.open(teach_path)
     name = match.group(1)
-    pngPath = os.path.join(path_dir, f'{name}/base.jpg')
+    pngPath = os.path.join(arc_res, f'{name}/base.jpg')
     try:
         tmp_img = Image.open(pngPath)
         box = (184,327,335,478)
